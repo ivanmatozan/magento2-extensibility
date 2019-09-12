@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Matozan\MagentoExtensibility\Model\Plugin\SortOrderExample">
+        <plugin name="extensibility_plugin_sort_order_a"
+                type="Matozan\MagentoExtensibility\Plugin\SortOrder\PluginA"/>
+        <plugin name="extensibility_plugin_sort_order_b"
+                type="Matozan\MagentoExtensibility\Plugin\SortOrder\PluginB"
+                sortOrder="10"/>
+        <plugin name="extensibility_plugin_sort_order_c"
+                type="Matozan\MagentoExtensibility\Plugin\SortOrder\PluginC"
+                sortOrder="20"/>
+    </type>
+</config>
