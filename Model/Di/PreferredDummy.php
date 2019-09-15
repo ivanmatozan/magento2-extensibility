@@ -8,7 +8,7 @@ namespace Matozan\MagentoExtensibility\Model\Di;
  * Class DummyPreference
  * @package Matozan\MagentoExtensibility\Model\Di
  */
-class DummyPreference extends Dummy
+class PreferredDummy extends Dummy
 {
     /**
      * @inheritDoc

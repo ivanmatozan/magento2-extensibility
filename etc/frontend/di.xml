@@ -2,13 +2,25 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Matozan\MagentoExtensibility\Model\Di\Dummy"
-                type="Matozan\MagentoExtensibility\Model\Di\DummyPreference"/>
+    <preference for="Matozan\MagentoExtensibility\Model\Di\Dummy" type="Matozan\MagentoExtensibility\Model\Di\PreferredDummy"/>
+
     <type name="Matozan\MagentoExtensibility\Controller\Di\Type">
         <arguments>
             <argument name="dummy" xsi:type="object">Matozan\MagentoExtensibility\Model\Di\UnluckyDummy</argument>
         </arguments>
     </type>
+
+    <virtualType name="Matozan\MagentoExtensibility\Model\Di\VirtualDummy" type="Matozan\MagentoExtensibility\Model\Di\Dummy">
+        <arguments>
+            <argument name="multiplier" xsi:type="number">4</argument>
+        </arguments>
+    </virtualType>
+    <type name="Matozan\MagentoExtensibility\Controller\Di\VirtualType">
+        <arguments>
+            <argument name="dummy" xsi:type="object">Matozan\MagentoExtensibility\Model\Di\VirtualDummy</argument>
+        </arguments>
+    </type>
+
     <type name="Matozan\MagentoExtensibility\Model\Plugin\SortOrderExample">
         <plugin name="extensibility_plugin_sort_order_a"
                 type="Matozan\MagentoExtensibility\Plugin\SortOrder\PluginA"/>

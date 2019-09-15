@@ -11,6 +11,20 @@ namespace Matozan\MagentoExtensibility\Model\Di;
 class Dummy
 {
     /**
+     * @var int
+     */
+    protected $multiplier;
+
+    /**
+     * Dummy constructor.
+     * @param int $multiplier
+     */
+    public function __construct(int $multiplier = 2)
+    {
+        $this->multiplier = $multiplier;
+    }
+
+    /**
      * Do something.
      */
     public function getResult(): string
@@ -32,6 +46,6 @@ class Dummy
      */
     protected function calculate(int $number): int
     {
-        return $number * 2;
+        return $number * $this->multiplier;
     }
 }
