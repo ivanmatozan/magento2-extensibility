@@ -2,6 +2,8 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Matozan\MagentoExtensibility\Model\Di\Dummy"
+                type="Matozan\MagentoExtensibility\Model\Di\DummyPreference"/>
     <type name="Matozan\MagentoExtensibility\Model\Plugin\SortOrderExample">
         <plugin name="extensibility_plugin_sort_order_a"
                 type="Matozan\MagentoExtensibility\Plugin\SortOrder\PluginA"/>
