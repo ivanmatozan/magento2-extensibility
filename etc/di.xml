@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Matozan\MagentoExtensibility\Api\FooInterface" type="Matozan\MagentoExtensibility\Model\Foo"/>
+    <preference for="Matozan\MagentoExtensibility\Model\Foo" type="Matozan\MagentoExtensibility\Model\Bar"/>
+
+    <type name="Matozan\MagentoExtensibility\Api\FooInterface">
+        <plugin name="matozan_extensibility_foo_plugin" type="Matozan\MagentoExtensibility\Plugin\FooPlugin"/>
+    </type>
+</config>
