@@ -2,7 +2,6 @@ define(function () {
     'use strict';
 
     return function (checkoutData) {
-        debugger;
         const origin = checkoutData.getNewCustomerShippingAddress;
 
         checkoutData.getNewCustomerShippingAddress = function () {
